@@ -18,7 +18,8 @@ LINE4:chartdata#AAFF00:"channel 1 (v)"
 --alt-y-grid \
 --width 800 \
 --height 400 \
-DEF:day1=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE \
+DEF:day1=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-0d:end=midnight+2d \
+SHIFT:day1:0 \
 LINE4:day1#FFFF00:"channel 1 (v) today" \
 DEF:day2=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-1d:end=midnight+1d \
 SHIFT:day2:86400 \

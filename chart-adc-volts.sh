@@ -19,13 +19,13 @@ LINE4:chartdata#AAFF00:"channel 1 (v)"
 --width 800 \
 --height 400 \
 DEF:day1=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE \
-LINE8:day1#FFFF00:"channel 1 (v) today" \
+LINE4:day1#FFFF00:"channel 1 (v) today" \
 DEF:day2=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-1d:end=midnight+1d \
 SHIFT:day2:86400 \
-LINE4:day2#00FFFF:"channel 1 (v) day-1" \
+LINE2:day2#00FFFF:"channel 1 (v) day-1" \
 DEF:day3=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-2d:end=midnight+0d \
 SHIFT:day3:172800 \
-LINE2:day3#FF00FF:"channel 1 (v) day-2"
+LINE1:day3#FF00FF:"channel 1 (v) day-2"
 
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-day.png \

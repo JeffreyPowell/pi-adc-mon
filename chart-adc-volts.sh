@@ -10,6 +10,7 @@ DEF:chartdata=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE 
 LINE4:chartdata#AAFF00:"channel 1 (v)"
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-dayonday.png \
+--slope-mode \
 --start midnight \
 --end midnight+1d \
 --upper-limit 14.5 \

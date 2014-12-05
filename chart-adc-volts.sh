@@ -3,7 +3,7 @@
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-hour.png \
 --start -1h \
 --upper-limit 14 \
---lower-limit 9 \
+--lower-limit 11 \
 --width 800 \
 --height 400 \
 DEF:chartdata=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE \
@@ -20,13 +20,20 @@ LINE4:chartdata#AAFF00:"channel 1 (v)"
 --height 400 \
 DEF:day1=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-0d:end=midnight+2d \
 SHIFT:day1:0 \
-LINE4:day1#FFFF00:"channel 1 (v) today" \
 DEF:day2=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-1d:end=midnight+1d \
 SHIFT:day2:86400 \
-LINE2:day2#00FFFF:"channel 1 (v) day-1" \
 DEF:day3=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-2d:end=midnight+0d \
 SHIFT:day3:172800 \
-LINE1:day3#FF00FF:"channel 1 (v) day-2"
+DEF:day4=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-3d:end=midnight-1d \
+SHIFT:day4:259200 \
+DEF:day5=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-4d:end=midnight-2d \
+SHIFT:day5:345600 \
+AREA:day1#FF000020 \
+AREA:day2#FF7F0020 \
+AREA:day3#C0C0C020 \
+LINE2:day1#FF0000:"channel 1 (v) today" \
+LINE2:day2#FF7F00:"channel 1 (v) day-1" \
+LINE2:day3#FFFF00:"channel 1 (v) day-2"
 
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-day.png \
@@ -44,9 +51,20 @@ LINE2:chartdata#00FF00:"channel 1 (v)"
 --width 800 \
 --height 400 \
 --upper-limit 13 \
---lower-limit 9 \
+--lower-limit 11 \
 DEF:chartdata=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE \
 AREA:chartdata#CCFFCC \
 LINE2:chartdata#00FF00:"channel 1 (v)"
+
+/usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-month.png \
+--start -1m \
+--width 800 \
+--height 400 \
+--upper-limit 13 \
+--lower-limit 11 \
+DEF:chartdata=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE \
+AREA:chartdata#CCFFCC \
+LINE2:chartdata#00FF00:"channel 1 (v)"
+
 
 

@@ -28,7 +28,7 @@ DEF:day4=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start
 SHIFT:day4:259200 \
 DEF:day5=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-4d:end=midnight-2d \
 SHIFT:day5:345600 \
-AREA:day5#00FFFF20
+AREA:day5#00FFFF20 \
 AREA:day4#00FF0020 \
 AREA:day3#FFFF0020 \
 AREA:day2#FF7F0020 \
@@ -37,7 +37,7 @@ LINE2:day5#FFFF00:"channel 1 (v) day-4" \
 LINE2:day4#FF7F00:"channel 1 (v) day-3" \
 LINE2:day3#FFFF00:"channel 1 (v) day-2" \
 LINE2:day2#FF7F00:"channel 1 (v) day-1" \
-LINE2:day1#FF0000:"channel 1 (v) today" \
+LINE2:day1#FF0000:"channel 1 (v) today"
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-day.png \
 --start -1d \

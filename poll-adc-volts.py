@@ -22,7 +22,7 @@ z = 1.00
 rate = 0.01 # seconds
 samples = 1 # samples
 
-print ("debug 2")
+#print ("debug 2")
 
 for i in range(0, 1):
 
@@ -70,7 +70,7 @@ for i in range(0, 1):
 
 #os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd `date +"%s"`:$V1:$V2:$V3:$V4:$V5:$V6:$V7:$V8')
 
-print("debug 1")
+#print("debug 1")
 
 os.system('/usr/bin/rrdtool update /usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd '+str(t)+':'+str(s1))
 

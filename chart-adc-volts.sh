@@ -40,13 +40,13 @@ AREA:day4#00FF0020 \
 AREA:day3#FFFF0020 \
 AREA:day2#FF7F0020 \
 AREA:day1#FF000020 \
-LINE2:day5#8B00FF:"channel 1 (v) day-6" \
-LINE2:day4#0000FF:"channel 1 (v) day-5" \
-LINE2:day5#FFFF00:"channel 1 (v) day-4" \
-LINE2:day4#FF7F00:"channel 1 (v) day-3" \
-LINE2:day3#FFFF00:"channel 1 (v) day-2" \
-LINE2:day2#FF7F00:"channel 1 (v) day-1" \
-LINE2:day1#FF0000:"channel 1 (v) today"
+LINE2:day5#8B00FF:"day-6" \
+LINE2:day4#0000FF:"day-5" \
+LINE2:day5#FFFF00:"day-4" \
+LINE2:day4#FF7F00:"day-3" \
+LINE2:day3#FFFF00:"day-2" \
+LINE2:day2#FF7F00:"day-1" \
+LINE2:day1#FF0000:"today"
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-day.png \
 --start -1d \

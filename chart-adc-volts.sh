@@ -26,7 +26,7 @@ LINE4:chartdata#AAFF00:"channel 1 (v)"
 -cGRID#00AA00 \
 -cMGRID#00AA00 \
 -cFONT#b7b7b7 \
--color AXIS#00AA00 \
+-cAXIS#00AA00 \
 -cFRAME#ffffff \
 -cARROW#000000 \
 DEF:day1=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-0d:end=midnight+2d \

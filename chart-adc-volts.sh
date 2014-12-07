@@ -2,8 +2,10 @@
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-hour.png \
 --start -1h \
---upper-limit 14 \
---lower-limit 11 \
+--upper-limit 14.5 \
+--lower-limit 10.5 \
+--rigid \
+--alt-y-grid \
 --width 600 \
 --height 400 \
 DEF:chartdata=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE \

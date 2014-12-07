@@ -44,9 +44,9 @@ LINE2:day5#8B00FF:"day-6" \
 LINE2:day4#0000FF:"day-5" \
 LINE2:day5#00FFFF:"day-4" \
 LINE2:day4#00FF00:"day-3" \
-LINE2:day3#FFFF00:"day-2" \
-LINE2:day2#FF7F00:"day-1" \
-LINE2:day1#FF0000:"today"
+LINE3:day3#FFFF00:"day-2" \
+LINE4:day2#FF7F00:"day-1" \
+LINE5:day1#FF0000:"today"
 
 /usr/bin/rrdtool graph /usr/local/scripts/git/pi-adc-mon/www/adc-volts-day.png \
 --start -1d \

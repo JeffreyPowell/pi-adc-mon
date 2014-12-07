@@ -19,6 +19,16 @@ LINE4:chartdata#AAFF00:"channel 1 (v)"
 --alt-y-grid \
 --width 500 \
 --height 600 \
+-cBACK#161616 \
+-cCANVAS#1e1e1e \
+-cSHADEA#000000 \
+-cSHADEB#000000 \
+-cGRID#00AA00 \
+-cMGRID#00AA00 \
+-cFONT#b7b7b7 \
+-color AXIS#00AA00 \
+-cFRAME#ffffff \
+-cARROW#000000 \
 DEF:day1=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-0d:end=midnight+2d \
 SHIFT:day1:0 \
 DEF:day2=/usr/local/scripts/git/pi-adc-mon/data/adc-volts.rrd:data:AVERAGE:start=midnight-1d:end=midnight+1d \
